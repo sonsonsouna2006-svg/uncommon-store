@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{
+  --black:#070707; --cream:#eee7d7; --muted:#aaa394; --line:#2a2925;
+  --olive:#5c6049; --max:1400px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--cream);font-family:"Space Grotesk",sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:50;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.nav{height:76px;position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;background:linear-gradient(#070707,transparent)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;font-size:15px}
+.brand-star{font-size:22px;line-height:1}
+.desktop-nav{display:flex;gap:34px;font:12px "DM Mono";letter-spacing:.08em}
+.desktop-nav a:hover{opacity:.55}
+.cart-button{background:none;border:0;color:var(--cream);font:12px "DM Mono";letter-spacing:.08em}
+.cart-button span{border:1px solid #777;border-radius:50%;padding:2px 6px;margin-left:5px}
+.hero{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14vh 7vw 7vw;background:radial-gradient(circle at 72% 40%,#24231f 0,#0d0d0c 28%,#070707 62%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.035),transparent 70%);animation:sweep 8s ease-in-out infinite}
+.hero-copy{position:relative;z-index:2;max-width:800px}
+.eyebrow{font:11px "DM Mono";letter-spacing:.16em;color:var(--muted);margin:0 0 20px}
+h1,h2{margin:0;font-weight:600;letter-spacing:-.055em}
+h1{font-size:clamp(65px,11vw,170px);line-height:.8}
+h1 em,h2 em{font-style:normal;color:var(--muted)}
+.hero-text{max-width:460px;color:#c5c0b4;line-height:1.6;margin:34px 0 28px;font-size:15px}
+.cta{display:inline-flex;align-items:center;gap:30px;border:1px solid #777;background:var(--cream);color:#090909;padding:16px 20px;font:11px "DM Mono";letter-spacing:.08em;transition:.25s}
+.cta:hover{transform:translateY(-3px);background:#fff}
+.cta span{font-size:16px}
+.hero-star{position:absolute;right:13vw;top:25%;font-size:clamp(100px,20vw,300px);animation:float 5s ease-in-out infinite;transform:rotate(-14deg);text-shadow:0 0 70px rgba(238,231,215,.1)}
+.hero-bottom{position:absolute;bottom:28px;left:7vw;right:7vw;display:flex;justify-content:space-between;color:#77736a;font:9px "DM Mono";letter-spacing:.1em}
+.statement,.shop,.size{max-width:var(--max);margin:auto;padding:150px 7vw}
+.statement h2{font-size:clamp(48px,8vw,110px);line-height:.9}
+.statement-grid{display:grid;grid-template-columns:1fr 1fr;gap:10vw;margin-top:80px;border-top:1px solid var(--line);padding-top:25px;color:#aaa;line-height:1.6}
+.shop{border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}
+.section-head h2{font-size:clamp(40px,6vw,78px)}
+.section-head>p{font:10px "DM Mono";color:#777}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.product{position:relative;background:#111;overflow:hidden;min-height:580px;display:flex;align-items:flex-end}
+.product:nth-child(2){margin-top:80px}
+.product:nth-child(3){margin-top:-20px}
+.product-visual{position:absolute;inset:0;background:linear-gradient(135deg,#dcd5c6,#8d887e);display:flex;align-items:center;justify-content:center}
+.product:nth-child(2) .product-visual,.product:nth-child(4) .product-visual{background:linear-gradient(135deg,#101111,#25271f)}
+.product-visual:after{content:"UNCOMMON";font-size:clamp(35px,7vw,95px);font-weight:700;letter-spacing:-.07em;opacity:.08;transform:rotate(-90deg)}
+.product-info{position:relative;z-index:2;width:100%;padding:24px;background:linear-gradient(transparent,rgba(0,0,0,.85));display:flex;justify-content:space-between;align-items:end}
+.product-name{font-size:18px;font-weight:600}.product-meta{font:10px "DM Mono";color:#aaa;margin-top:7px}
+.price{font:12px "DM Mono"}
+.product button{margin-top:12px;background:var(--cream);border:0;padding:10px 13px;font:10px "DM Mono";letter-spacing:.08em}
+.manifesto{min-height:65vh;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px}
+.manifesto-star{font-size:100px;animation:float 4s ease-in-out infinite}.manifesto p{font:12px "DM Mono";line-height:2.2;letter-spacing:.12em;color:#aaa}.manifesto strong{color:var(--cream)}
+.size{display:grid;grid-template-columns:1fr 1fr;gap:10vw}.size h2{font-size:clamp(45px,7vw,90px);line-height:.9}.size>p{align-self:end;max-width:400px;color:#999;line-height:1.7}
+footer{border-top:1px solid var(--line);padding:35px 7vw;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;color:#777;font:9px "DM Mono";letter-spacing:.1em}.footer-brand{color:var(--cream);font:700 15px "Space Grotesk";letter-spacing:.1em}.footer-links{display:flex;justify-content:flex-end;gap:20px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:60;opacity:0;pointer-events:none;transition:.3s}.overlay.open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;z-index:70;top:0;right:0;width:min(460px,100%);height:100%;background:#0d0d0d;border-left:1px solid var(--line);transform:translateX(100%);transition:.35s;display:flex;flex-direction:column;padding:28px}.cart-drawer.open{transform:none}.drawer-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px}.drawer-head h2{font-size:24px}.drawer-head button,.modal-close{background:none;border:0;color:var(--cream);font-size:28px}.cart-items{flex:1;overflow:auto;padding:20px 0}.cart-item{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:16px 0}.cart-item small{display:block;color:#777;margin-top:6px}.cart-item button{background:none;border:0;color:#999}.cart-footer{border-top:1px solid var(--line);padding-top:20px}.cart-footer>div{display:flex;justify-content:space-between;margin-bottom:20px;font:11px "DM Mono"}.full{width:100%;justify-content:space-between}
+.modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);padding:20px}.modal.open{display:flex}.modal-inner{width:min(560px,100%);max-height:90vh;overflow:auto;background:#101010;border:1px solid #333;padding:35px}.modal-inner h2{font-size:42px;margin-bottom:30px}.modal-close{float:right}.modal form{display:grid;gap:16px}.modal label{font:10px "DM Mono";letter-spacing:.08em;color:#aaa;display:grid;gap:7px}.modal input,.modal textarea,.modal select{background:#090909;color:var(--cream);border:1px solid #333;padding:13px;outline:none}.modal textarea{min-height:90px;resize:vertical}.fine{font:9px "DM Mono";color:#666;line-height:1.6;margin-top:20px}
+@keyframes float{50%{transform:translateY(-18px) rotate(-10deg)}}@keyframes sweep{50%{transform:translateX(15%);opacity:.5}}
+@media(max-width:700px){
+ .desktop-nav{display:none}.nav{padding:0 20px}.hero{padding:0 22px 70px;min-height:92svh}.hero-star{right:7vw;top:23%;opacity:.65}.hero-bottom{left:22px;right:22px}.hero-bottom span:last-child{display:none}
+ .statement,.shop,.size{padding:95px 22px}.statement-grid,.size{grid-template-columns:1fr;gap:35px;margin-top:45px}.products{grid-template-columns:1fr;gap:14px}.product,.product:nth-child(2),.product:nth-child(3){margin:0;min-height:480px}.section-head{display:block}.section-head>p{margin-top:15px}.footer-links{display:block}.footer-links span{display:block;margin-top:8px}
+}
