@@ -5,9 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UNCOMMON — For The Uncommon</title>
   <meta name="description" content="UNCOMMON — premium Egyptian streetwear for the uncommon.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2185777149025660');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2185777149025660&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <link rel="preload" href="assets/uncommon-logo.png" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="noise"></div>
 
@@ -90,6 +111,7 @@
       <button class="cta full" id="checkoutBtn">CHECKOUT <span>↗</span></button>
     </div>
   </aside>
+
   <div class="overlay" id="overlay"></div>
 
   <div class="modal" id="checkoutModal">
@@ -97,19 +119,34 @@
       <button class="modal-close" id="closeCheckout">×</button>
       <p class="eyebrow">CHECKOUT</p>
       <h2>COMPLETE YOUR ORDER</h2>
+
       <form id="checkoutForm">
-        <label>FULL NAME<input required name="name" placeholder="Your name"></label>
-        <label>PHONE<input required name="phone" placeholder="01XXXXXXXXX" inputmode="tel"></label>
-        <label>GOVERNORATE<input required name="governorate" placeholder="Alexandria"></label>
-        <label>ADDRESS<textarea required name="address" placeholder="Full delivery address"></textarea></label>
+        <label>FULL NAME
+          <input required name="name" placeholder="Your name">
+        </label>
+
+        <label>PHONE
+          <input required name="phone" placeholder="01XXXXXXXXX" inputmode="tel">
+        </label>
+
+        <label>GOVERNORATE
+          <input required name="governorate" placeholder="Alexandria">
+        </label>
+
+        <label>ADDRESS
+          <textarea required name="address" placeholder="Full delivery address"></textarea>
+        </label>
+
         <label>PAYMENT
           <select name="payment">
             <option>Cash on Delivery</option>
             <option>InstaPay</option>
           </select>
         </label>
+
         <button class="cta full" type="submit">PLACE ORDER <span>↗</span></button>
       </form>
+
       <p class="fine">Prototype checkout. Payment, Bosta shipping and order storage will be connected in the next build stage.</p>
     </div>
   </div>
